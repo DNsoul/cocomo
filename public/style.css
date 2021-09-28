@@ -1,0 +1,30 @@
+.boxData {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.boxData:not(:disabled) {
+    cursor: auto;
+}
+
+.minmaxWight {
+    min-width: 500px;
+    width: 100%;
+}
+
+.selector {
+    min-width: 500px;
+    width: 48%;
+    margin: 1%;
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
