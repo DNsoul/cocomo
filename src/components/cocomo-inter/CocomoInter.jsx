@@ -34,7 +34,7 @@ const CocomoInter = () => {
 			<div className="card-body" style={{padding: 20}}>
 				<div className="d-flex"> 
 					<div style={{display: 'flex', marginBottom: 20}}>
-						<BoxData num={pm} desc={'Человеко-часов'} />
+						<BoxData num={pm} desc={'Человеко-месяцев'} />
 						<BoxData num={tm} desc={'Месяцев'} />
 					</div>
 					<div className="inputBlock" >

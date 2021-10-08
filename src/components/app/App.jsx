@@ -61,10 +61,22 @@ const App = () => {
               <h6>Описание</h6>
               <p>Constructive Cost Model (конструктивная модель стоимости) – это способ оценки стоимости разработки программного обеспечения, разработанная Барри Боэмом.</p>
               <hr/>
-              <h6>Программу разработал:</h6>
-              <span>Лупашко Андрей</span><br/>
-              <span>Группа: 449-2</span><br/>
-              <span>2021</span>
+              <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <span className="h6">Программу разработал:</span>
+                <span>Лупашко Андрей</span>
+              </div>
+              <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <span className="h6">Дисциплина:</span>
+                <span>Программная инженерия</span>
+              </div>
+              <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <span className="h6">Группа:</span>
+                <span>449-2</span>
+              </div>
+              <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <span className="h6">Год:</span>
+                <span>2021</span>
+              </div>
             </div>
             <div className="modal-footer">
               <a target="_blank" href="https://www.eulatemplate.com/live.php?token=4vBZ5g4u0LuqgX6yTAWobOl8XC75xXW0" type="button" className="btn btn-success" rel="noreferrer">Лицензионное соглашение</a>

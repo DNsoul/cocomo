@@ -51,7 +51,7 @@ const CococmoII = () => {
             <div className="card-body" style={{padding: 20}}>
                 <div className="d-flex"> 
                     <div style={{display: 'flex', marginBottom: 20}}>
-                        <BoxData num={pm} desc={'Человеко-часов'} />
+                        <BoxData num={pm} desc={'Человеко-месяцев'} />
                         <BoxData num={tm} desc={'Месяцев'} />
                     </div>
                     <div className="inputBlock" >
@@ -63,7 +63,7 @@ const CococmoII = () => {
                         <div className="input-group mb-3">
                             <label className="input-group-text" htmlFor="selector">Стадия проекта</label>
                             <select className="form-select" id="selector" value={typeDesign} onChange={(e) => setDesign(Number(e.target.value))} >
-                                <option key={0} value={0}>Предворительная оценка</option>
+                                <option key={0} value={0}>Предварительная оценка</option>
                                 <option key={1} value={1}>Детальная оценка</option>
                             </select>
                         </div>

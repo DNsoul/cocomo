@@ -21,7 +21,7 @@ const CocomoBasic = () => {
 			</div>
 			<div className="card-body" style={{padding: 20}}>
 				<div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 20}}>
-					<BoxData num={pm} desc={'Человеко-часов'} />
+					<BoxData num={pm} desc={'Человеко-месяцев'} />
 					<BoxData num={tm} desc={'Месяцев'} />
 				</div>
 				<div className="input-group mb-3">
