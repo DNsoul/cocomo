@@ -3,7 +3,7 @@ import BoxData from '../box-data';
 
 const CocomoBasic = () => {
     const [selected, setSelect] = useState(0);
-    const [size, setSize] = useState('0');
+    const [size, setSize] = useState('');
 
     const cof = [
 		[2.4, 1.05, 2.5, 0.38],
@@ -17,7 +17,7 @@ const CocomoBasic = () => {
     return (
 		<div className="card">
 			<div className="card-header">
-				Cocomo 1 - Базовый уровень
+				COCOMO I - Базовый уровень
 			</div>
 			<div className="card-body" style={{padding: 20}}>
 				<div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 20}}>
@@ -37,10 +37,20 @@ const CocomoBasic = () => {
 					<input 
 						type="number" 
 						value={size} 
-						onChange={(e) => setSize(e.target.value)} 
+						onChange={(e) => {
+							if (e.target.value < 0) return;
+							setSize(e.target.value)
+						}}
+						onKeyDown={(e) => {
+							if (e.key === "-" || e.key === "+") {
+								e.preventDefault()
+							}
+						}}
 						className="form-control" 
 						aria-label="Sizing example input" 
 						aria-describedby="size"
+						title
+						min="0"
 					/>
 					<span className="input-group-text" id="size">тысяч строк кода</span>
 				</div>

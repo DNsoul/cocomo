@@ -10,20 +10,23 @@ const App = () => {
     <BrowserRouter>
       <nav className="navbar navbar-expand-md navbar-dark bg-primary">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Cocomo</Link>
+          <span className="navbar-brand" to="/">COCOMO</span>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/cocomo_basic">Cocomo Базовый</Link>
+                <Link className="nav-link" to="/">Что такое COCOMO?</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/cocomo_inter">Cococmo Продвинутый</Link>
+                <Link className="nav-link" to="/cocomo_basic">COCOMO Базовый</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/cocomo_II">Cococmo 2</Link>
+                <Link className="nav-link" to="/cocomo_inter">COCOMO Продвинутый</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/cocomo_II">COCOMO II</Link>
               </li>
             </ul>
             <span className="navbar-text">
@@ -73,12 +76,9 @@ const App = () => {
                 <span className="h6">Группа:</span>
                 <span>449-2</span>
               </div>
-              <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <span className="h6">Год:</span>
-                <span>2021</span>
-              </div>
             </div>
-            <div className="modal-footer">
+            <div className="modal-footer" style={{display: 'flex', justifyContent: 'space-between'}}>
+              <span>© Лупашко, 2021</span>
               <a target="_blank" href="https://www.eulatemplate.com/live.php?token=4vBZ5g4u0LuqgX6yTAWobOl8XC75xXW0" type="button" className="btn btn-success" rel="noreferrer">Лицензионное соглашение</a>
             </div>
           </div>

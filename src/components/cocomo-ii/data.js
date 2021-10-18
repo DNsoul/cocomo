@@ -171,7 +171,7 @@ export const emLateData = [
         ]
     },
     {
-        title: 'Параметры платформы',
+        title: 'Параметры проекта',
         selects: [
             {
                 id: 13,

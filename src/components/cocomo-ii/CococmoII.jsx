@@ -4,7 +4,7 @@ import SelectBlock from '../select-block';
 import {sfData, emEarlyData, emLateData} from './data';
 
 const CococmoII = () => {
-    const [size, setSize] = useState('0');
+    const [size, setSize] = useState('');
 
     const [typeDesign, setDesign] = useState(0);
 
@@ -46,7 +46,7 @@ const CococmoII = () => {
     return (
         <div className="card">
             <div className="card-header">
-				Cocomo 2
+                COCOMO II
 			</div>
             <div className="card-body" style={{padding: 20}}>
                 <div className="d-flex"> 
@@ -57,7 +57,23 @@ const CococmoII = () => {
                     <div className="inputBlock" >
                         <div className="input-group mb-3">
                             <span className="input-group-text" id="size">Размер</span>
-                            <input type="number" value={size} onChange={(e) => setSize(e.target.value)} className="form-control" aria-label="Sizing example input" aria-describedby="size"/>
+                            <input 
+                                type="number" 
+                                title 
+                                value={size} 
+                                onChange={(e) => {
+                                    if (e.target.value < 0) return;
+                                    setSize(e.target.value)
+                                }} 
+                                className="form-control" 
+                                aria-label="Sizing example input" 
+                                aria-describedby="size"
+                                onKeyDown={(e) => {
+                                    if (e.key === "-" || e.key === "+") {
+                                        e.preventDefault()
+                                    }
+                                }}
+                                />
                             <span className="input-group-text" id="size">тысяч строк кода</span>
                         </div>
                         <div className="input-group mb-3">

@@ -5,7 +5,7 @@ import BoxData from '../box-data';
 
 const CocomoInter = () => {
     const [slt, setSlt] = useState(0);
-    const [size, setSize] = useState('0');
+    const [size, setSize] = useState('');
 
 	const [valueSelect, setSelect] = useState([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
 
@@ -29,7 +29,7 @@ const CocomoInter = () => {
     return (
 		<div className="card">
 			<div className="card-header">
-				Cocomo 1 - Продвинутый уровень
+				COCOMO I - Продвинутый уровень
 			</div>
 			<div className="card-body" style={{padding: 20}}>
 				<div className="d-flex"> 
@@ -48,7 +48,23 @@ const CocomoInter = () => {
 						</div>
 						<div className="input-group mb-3">
 							<span className="input-group-text" id="size">Размер</span>
-							<input type="number" value={size} onChange={(e) => setSize(e.target.value)} className="form-control" aria-label="Sizing example input" aria-describedby="size"/>
+							<input 
+								type="number" 
+								title 
+								value={size} 
+								onChange={(e) => { 
+									if (e.target.value < 0) return;
+									setSize(e.target.value)
+								}} 
+								className="form-control" 
+								aria-label="Sizing example input" 
+								aria-describedby="size"
+								onKeyDown={(e) => {
+									if (e.key === "-" || e.key === "+") {
+										e.preventDefault()
+									}
+								}}
+							/>
 							<span className="input-group-text" id="size">тысяч строк кода</span>
 						</div>
 					</div>
