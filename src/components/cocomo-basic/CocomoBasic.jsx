@@ -21,8 +21,8 @@ const CocomoBasic = () => {
 			</div>
 			<div className="card-body" style={{padding: 20}}>
 				<div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 20}}>
-					<BoxData num={pm} desc={'Человеко-месяцев'} />
-					<BoxData num={tm} desc={'Месяцев'} />
+					<BoxData num={pm} desc={'Человеко-месяцев'} title={'Трудоёмкость'} />
+					<BoxData num={tm} desc={'Месяцев'} title={'Срок разработки'} />
 				</div>
 				<div className="input-group mb-3">
 					<label className="input-group-text" htmlFor="selector">Тип проекта</label>
@@ -33,7 +33,7 @@ const CocomoBasic = () => {
 					</select>
 				</div>
 				<div className="input-group mb-3">
-					<span className="input-group-text" id="size">Размер</span>
+					<span className="input-group-text" id="size">Размер кода</span>
 					<input 
 						type="number" 
 						value={size} 

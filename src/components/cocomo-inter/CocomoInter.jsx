@@ -34,8 +34,8 @@ const CocomoInter = () => {
 			<div className="card-body" style={{padding: 20}}>
 				<div className="d-flex"> 
 					<div style={{display: 'flex', marginBottom: 20}}>
-						<BoxData num={pm} desc={'Человеко-месяцев'} />
-						<BoxData num={tm} desc={'Месяцев'} />
+						<BoxData num={pm} desc={'Человеко-месяцев'} title={'Трудоёмкость'} />
+						<BoxData num={tm} desc={'Месяцев'} title={'Срок разработки'} />
 					</div>
 					<div className="inputBlock" >
 						<div className="input-group mb-3">
@@ -47,7 +47,7 @@ const CocomoInter = () => {
 							</select>
 						</div>
 						<div className="input-group mb-3">
-							<span className="input-group-text" id="size">Размер</span>
+							<span className="input-group-text" id="size">Размер кода</span>
 							<input 
 								type="number" 
 								title 
